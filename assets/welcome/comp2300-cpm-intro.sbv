@@ -1,0 +1,83 @@
+0:00:00.480,0:00:07.440
+Hi there, I'm Charles Martin and I'm the lecturer 
+for COMP2300/6300 computer organization and
+
+0:00:07.440,0:00:11.280
+program execution here at the ANU.
+This course is about learning how
+
+0:00:11.280,0:00:16.720
+your computer actually works. We'll look at the 
+different parts of a CPU, how they fit together,
+
+0:00:16.720,0:00:20.480
+and how the high level programs that you 
+might write in other courses get turned into
+
+0:00:20.480,0:00:25.840
+instructions that the CPU can actually execute.
+I just want to welcome everyone to this course
+
+0:00:25.840,0:00:28.560
+whether you're here on ANU 
+campus or whether you can't be
+
+0:00:28.560,0:00:35.040
+with us this semester you're all very welcome.
+Most of the content for COMP2300/6300 is already
+
+0:00:35.040,0:00:39.520
+online on our website and you can check it out.
+Now one of the really exciting things about
+
+0:00:39.520,0:00:43.920
+this course is that everyone will get one 
+of these... this is a microbit and it's a
+
+0:00:43.920,0:00:48.160
+tiny computer which fits in your pocket. It's 
+got a little CPU which you can use in your labs
+
+0:00:48.160,0:00:53.200
+and assignments to understand how the CPU in 
+your laptop or desktop computer actually works.
+
+0:00:53.920,0:00:58.080
+A lot of this course looks like this, 
+you'll be writing programs in assembly
+
+0:00:58.080,0:01:02.000
+that means you'll be directly controlling 
+what the CPU on your micro bit is doing.
+
+0:01:02.000,0:01:05.360
+We'll be looking at how high-level 
+programming concepts from C,
+
+0:01:05.360,0:01:10.160
+Java or Python might get transformed into 
+assembly instructions that your computer can run.
+
+0:01:10.160,0:01:13.280
+You'll learn some fundamentals 
+about operating systems and networks
+
+0:01:13.280,0:01:17.920
+and how they relate to your computer's hardware. 
+Finally, a theme of this course is that the
+
+0:01:17.920,0:01:21.840
+assignments are about making expressive 
+and creative programs for your microbit.
+
+0:01:21.840,0:01:27.280
+The microbit has buttons, it has LED lights, 
+it has a speaker, and you can use it to create
+
+0:01:27.280,0:01:32.320
+a sound and light show or an interactive toy.
+This course is a lot of fun, and I think you're
+
+0:01:32.320,0:01:37.760
+really going to enjoy it.
+See you in week one!

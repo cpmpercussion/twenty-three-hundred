@@ -2,11 +2,10 @@
 title: "Assignment 1: Light Show"
 permalink: /assessments/light-show/
 tagline: "Create a light and sound show on your micro:bit"
-image: "/assets/assessments/01-lightshow/arno-senoner-FDtJZDU8kws-unsplash.jpg"
+image: "/assets/assessments/arno-senoner-FDtJZDU8kws-unsplash.jpg"
 image_alt: "Photo by Arno Senoner on Unsplash" 
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-assignment-1
 show_toc: true
-# hidden: true
 ---
 
 {:.lead}

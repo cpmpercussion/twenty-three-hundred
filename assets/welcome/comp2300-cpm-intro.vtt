@@ -1,0 +1,193 @@
+WEBVTT COMP2300 intro 2022
+
+1
+00:00:00.120 --> 00:00:00.480
+[Music]
+
+2
+00:00:00.480 --> 00:00:02.879
+Hi there I'm Charles Martin and I'm the
+
+3
+00:00:02.879 --> 00:00:06.480
+lecturer for COMP2300/6300 Computer
+
+4
+00:00:06.480 --> 00:00:08.960
+Organization and Program Execution here
+
+5
+00:00:08.960 --> 00:00:11.120
+at the ANU. This course is about learning
+
+6
+00:00:11.120 --> 00:00:13.360
+how your computer actually works,
+
+7
+00:00:13.360 --> 00:00:14.559
+we'll look at the different parts of a
+
+8
+00:00:14.559 --> 00:00:17.119
+CPU, how they fit together, and how the
+
+9
+00:00:17.119 --> 00:00:18.800
+high level programs that you might write
+
+10
+00:00:18.800 --> 00:00:20.480
+in other courses get turned into
+
+11
+00:00:20.480 --> 00:00:22.480
+instructions that the CPU can actually
+
+12
+00:00:22.480 --> 00:00:24.800
+execute. I just want to welcome everyone
+
+13
+00:00:24.800 --> 00:00:26.640
+to this course whether you're here on
+
+14
+00:00:26.640 --> 00:00:28.720
+ANU campus or whether you can't be with
+
+15
+00:00:28.720 --> 00:00:31.519
+us this semester, you're all very welcome.
+
+16
+00:00:31.519 --> 00:00:34.480
+Most of the content for COMP2300/6300
+
+17
+00:00:34.480 --> 00:00:36.640
+is already online on our website and you
+
+18
+00:00:36.640 --> 00:00:38.719
+can check it out. Now one of the really
+
+19
+00:00:38.719 --> 00:00:40.320
+exciting things about this course is
+
+20
+00:00:40.320 --> 00:00:42.559
+that everyone will get one of these
+
+21
+00:00:42.559 --> 00:00:44.239
+this is a microbit and it's a tiny
+
+22
+00:00:44.239 --> 00:00:46.079
+computer which fits in your pocket. It's
+
+23
+00:00:46.079 --> 00:00:47.760
+got a little CPU which you can use in
+
+24
+00:00:47.760 --> 00:00:49.440
+your labs and assignments to understand
+
+25
+00:00:49.440 --> 00:00:51.920
+how the CPU in your laptop or desktop
+
+26
+00:00:51.920 --> 00:00:53.920
+computer actually works.
+
+27
+00:00:53.920 --> 00:00:56.000
+A lot of this course looks like this
+
+28
+00:00:56.000 --> 00:00:58.079
+you'll be writing programs in assembly
+
+29
+00:00:58.079 --> 00:00:59.199
+that means you'll be directly
+
+30
+00:00:59.199 --> 00:01:01.120
+controlling what the CPU on your microbit
+
+31
+00:01:01.120 --> 00:01:02.800
+is doing. We'll be looking at how
+
+32
+00:01:02.800 --> 00:01:05.360
+high-level programming concepts from C
+
+33
+00:01:05.360 --> 00:01:07.600
+Java or Python might get transformed
+
+34
+00:01:07.600 --> 00:01:09.040
+into assembly instructions that your
+
+35
+00:01:09.040 --> 00:01:10.720
+computer can run. You'll learn some
+
+36
+00:01:10.720 --> 00:01:12.560
+fundamentals about operating systems and
+
+37
+00:01:12.560 --> 00:01:14.400
+networks and how they relate to your
+
+38
+00:01:14.400 --> 00:01:16.560
+computer's hardware. Finally a theme of
+
+39
+00:01:16.560 --> 00:01:18.560
+this course is that the assignments are
+
+40
+00:01:18.560 --> 00:01:20.320
+about making expressive and creative
+
+41
+00:01:20.320 --> 00:01:22.320
+programs for your microbit the
+
+42
+00:01:22.320 --> 00:01:24.960
+microbit has buttons, it has LED lights, it has
+
+43
+00:01:24.960 --> 00:01:27.759
+a speaker, and you can use it to create a
+
+44
+00:01:27.759 --> 00:01:29.840
+sound and light show or an interactive
+
+45
+00:01:29.840 --> 00:01:32.000
+toy. This course is a lot of fun and I
+
+46
+00:01:32.000 --> 00:01:33.680
+think you're really going to enjoy it.
+
+47
+00:01:33.680 --> 00:01:35.570
+See you in week one!
+
+48
+00:01:35.570 --> 00:01:39.170
+[Music]
