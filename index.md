@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Twenty-Three Hundred
 ---
 
