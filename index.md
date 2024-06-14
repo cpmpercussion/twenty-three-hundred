@@ -21,19 +21,17 @@ Twenty-Three Hundred is a course that **challenges your assumptions** about how 
 
 ## Getting started
 
-If you've just enrolled, have a look at the [course start checklist]({% link _resources/01-faq.md %}#course-start-checklist).
+If you're new, have a look at the [course start checklist]({% link _resources/01-faq.md %}#course-start-checklist).
 
 ## Course Content
 
-This site contains all the course content: 
+This site contains: 
 
 - [**lecture slides**]({% link _lectures/index.md %}), 
-- [**lab content**]({% link _labs/index.md %}), 
-- [**assessments**]({% link _assessments/index.md %}), 
+- [**learning activities**]({% link _labs/index.md %}), 
+- [**assessment projects**]({% link _assessments/index.md %}), 
 - and other [**resources**]({% link _resources/index.md %}).
 
-## Getting Help 
+## Acknowledgements
 
-If you need help with any aspect of Twenty Three Hundred, you can reach out to [Charles Martin](https://charlesmartin.au).
-
-
+These learning materials was taught by Charles Martin from 2019--2022 at the Australian National University from materials adapted from [Ben Swift](https://benswift.me) and [Uwe Zimmer](http://transit-port.net). Many casual tutors and staff contributed text and ideas to the learning activities and assessments along the way including Brent Schuetze, Harrison Shoebridge, Benjamin Gray, Ashleigh Johannes, and others I have forgotten to mention. Teaching this course was an incredible journey (and a lot of work) and I thank the students who sent a lot of positive energy and ideas back.
