@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "https://comp.anu.edu.au/courses/comp2300/assets/schemas/statement-of-originality#",
+  "title": "Statement of Originality",
+  "description": "Schema for validating statement-of-originality.yml in COMP2300 assignments",
+  "type": "object",
+  "required": [ "declaration", "name", "uid" ],
+  "properties": {
+	"declaration": { "type": "string" },
+
+	"uid": {
+	  "type": "string",
+	  "pattern": "^u[0-9]{7}$"
+	},
+
+	"name": { "type": "string" },
+
+	"collaboration": {
+	  "type": "array",
+	  "items": {
+		"type": "object",
+		"required": [ "name", "comment" ],
+		"properties": {
+		  "name": { "type": "string" },
+		  "comment": { "type": "string" }
+		}
+	  }
+	},
+
+	"code": {
+	  "type": "array",
+	  "items": {
+		"type": "object",
+		"required": [ "comment", "url", "licence" ],
+		"properties": {
+		  "comment": { "type": "string" },
+		  "url": {"type": "string" },
+		  "licence": { "type": "string" }
+		}
+	  }
+	},
+
+	"assets": {
+	  "type": "array",
+	  "items": {
+		"type": "object",
+		"required": [ "comment", "url", "licence" ],
+		"properties": {
+		  "comment": { "type": "string" },
+		  "url": {"type": "string" },
+		  "licence": { "type": "string" }
+		}
+	  }
+	}
+  }
+}
