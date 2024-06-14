@@ -34,4 +34,6 @@ This site contains:
 
 ## Acknowledgements
 
-These learning materials was taught by Charles Martin from 2019--2022 at the Australian National University from materials adapted from [Ben Swift](https://benswift.me) and [Uwe Zimmer](http://transit-port.net). Many casual tutors and staff contributed text and ideas to the learning activities and assessments along the way including Brent Schuetze, Harrison Shoebridge, Benjamin Gray, Ashleigh Johannes, and others I have forgotten to mention. Teaching this course was an incredible journey (and a lot of work) and I thank the students who sent a lot of positive energy and ideas back.
+These learning materials was taught by Charles Martin from 2019--2022 at the Australian National University from materials adapted from [Ben Swift](https://benswift.me) and [Uwe Zimmer](http://transit-port.net). Apologies Uwe for presenting some of your amazing diagrams in a weird format! 
+
+Many tutors and staff contributed text and ideas to the learning activities and assessments along the way including Brent Schuetze, Harrison Shoebridge, Benjamin Gray, Ashleigh Johannes, and others I have forgotten to mention. Teaching this course was an incredible journey (and a lot of work) and I thank the students who sent a lot of positive energy and ideas back.
