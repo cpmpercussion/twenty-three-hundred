@@ -1,0 +1,271 @@
+// -----------------------------------------------------------------------------
+// This file is a placeholder to allow overriding of default theme variables.
+// It was been left deliberately blank within the theme.
+//
+// In a site which uses this theme, you can create a corresponding file
+// _sass/custom.scss, and define custom values for any default theme variables,
+// i.e. any variable defined in 'abstracts/variables' or 'abstract/colors'
+// with !default option set.
+//
+// This file can't be used for overriding styles, as it's imported first.
+// -----------------------------------------------------------------------------
+// lab boxes
+
+// // nice callout boxes
+// // colors follow the anu style guide: http://webpublishing.anu.edu.au/web-style-guide/style-sampler.php
+// $error-color: #f00;
+// $warn-color: #fc3;
+// // $info-color: #3498db;
+// $success-color: #2ecc71;
+
+// // these are my own custom colors
+// $think-color: #e84393;
+// $talk-color: #1abc9c;
+// $push-color: #d35400;
+// $extension-color: #9b59b6;
+
+// // swiped from ANU neotheme, but adjusted to use custom colours, not ANU colormap.
+// @function get-custom-color-level($color, $level: 0) {
+//     @return mix(#ffffff, $color, $level * 22%);
+// }
+
+
+// .success-box {
+//     @extend %callout-box;
+//     border-color: $success-color;
+//     background: get-custom-color-level($success-color, 4);
+// }
+
+// .think-box {
+//     @extend %callout-box;
+//     border-color: $think-color;
+//     background: get-custom-color-level($think-color, 4);
+// }
+
+// .talk-box {
+//     @extend %callout-box;
+//     border-color: $talk-color;
+//     background: get-custom-color-level($talk-color, 4);
+// }
+
+// .push-box {
+//     @extend %callout-box;
+//     border-color: $push-color;
+//     background: get-custom-color-level($push-color, 4);
+// }
+
+// .do-box {
+//     @extend %callout-box;
+//     border-color: $push-color;
+//     background: get-custom-color-level($push-color, 4);
+// }
+
+// .extension-box {
+//     @extend %callout-box;
+//     border-color: $extension-color;
+//     background: get-custom-color-level($extension-color, 4);
+// }
+
+
+// on _lectures/index.md page
+
+.lecture-media-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+
+    .lecture-media-item {
+        flex: 1;
+        padding: 1em 2em;
+        text-decoration: none;
+        transition: background-color 0.5s ease-out;
+        border: 1px solid #ebebeb;
+
+        &:hover {
+            background-color: #ebebeb;
+        }
+    }
+
+    .lecture-media-item-disabled {
+        flex: 1;
+        padding: 1em 2em;
+        text-decoration: none;
+        transition: background-color 0.5s ease-out;
+        border: 1px solid #ebebeb;
+        color: #bbbbbb;
+
+        &:hover {
+            background-color: #ebebeb;
+        }
+    }
+}
+
+@mixin comp1720-blockquote {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	color: #000;
+}
+
+// revise blockquotes QUITE a bit to make them less press callout-y
+blockquote {
+	p {
+		@include comp1720-blockquote;
+	}
+
+	em:last-child {
+		@include comp1720-blockquote;
+		display: inline;
+	}
+}
+
+// old 1720 customs.
+
+// for the nice flexbox-based display of people & photos on the People page
+#content {
+	.people-container {
+		display: flex;
+		justify-content: space-between;
+		flex-flow: row wrap;
+	}
+
+	.person {
+		padding: 5px;
+		max-width: 300px;
+		margin: 0;
+	}
+
+	.social-list {
+		display: flex;
+		list-style: none;
+		padding: 0;
+		margin-top: 3em;
+	}
+
+	.social-list-item {
+		flex-grow: 1;
+		color: #55707D;
+		text-align: center;
+		transition: background 1s;
+	}
+
+	.social-list-item:hover {
+		text-align: center;
+		background: #ccc;
+	}
+}
+
+// // tables should be full-width by default
+// table { width: 100%; }
+
+/*
+ * Tweaks for lab content boxes etc.
+ */
+
+
+//  #tweaks-content code, pre {
+// 	font-size: 1em;
+//   }
+  
+//   #right-panel ul {
+// 	/* hide contents of right panel on mobile */
+// 	display: none;
+//   }
+  
+//   @media (min-width: 485px) {
+// 	#right-panel {
+// 	  width: 27%;
+// 	  clear:right;
+// 	  margin-right:5px !important;
+// 	  margin-left:5px !important
+// 	}
+  
+// 	#right-panel ul {
+// 	  display: block;
+// 	}
+//   }
+  
+//   #rssbox {
+// 	padding: 0;
+// 	float: right;
+// 	height: 16px;
+// 	width: 16px;
+//   }
+  
+//   #gw-nav-links .icon {
+// 	fill: #ccc;
+// 	display: inline-block;
+// 	width: 30px;
+// 	height: 30px;
+// 	text-align: center;
+// 	margin: 7px auto;
+// 	vertical-align: middle;
+//   }
+  
+//   .post-list {
+// 	padding-left: 0;
+//   }
+  
+//   $table-border-color: #BF2F37;
+//   $table-border-color-light: lighten($table-border-color, 30%);
+  
+//   th:first-of-type, td:first-of-type {
+// 	border-left: 1px solid $table-border-color;
+//   }
+  
+//   tr:first-of-type th, tr:last-of-type td {
+// 	border-bottom: 1px solid $table-border-color;
+//   }
+  
+//   td, th {
+// 	border-left: 1px solid $table-border-color-light;
+// 	border-bottom: 1px solid $table-border-color-light;
+//   }
+  
+  // CSS for the cards.html include
+  
+//   .cards-container {
+// 	  display: flex;
+// 	  justify-content: space-between;
+// 	  flex-flow: row wrap;
+//   }
+  
+//   .card {
+// 	  padding: 5px;
+// 	  max-width: 300px;
+// 	  margin: 0;
+  
+// 	  a {
+// 		  text-decoration: none;
+// 	  }
+//   }
+
+  
+//   // nice blockquotes
+//   // from https://css-tricks.com/snippets/css/simple-and-nice-blockquote-styling/
+//   blockquote {
+// 	background-color: #eee;
+// 	border-left: 10px solid #ccc;
+// 	padding: 1em 1em;
+// 	margin: 1em 0;
+// 	quotes: "\201C""\201D""\2018""\2019";
+//   }
+  
+//   blockquote:before {
+// 	color: #ccc;
+// 	content: open-quote;
+// 	font-size: 4em;
+// 	line-height: 0.1em;
+// 	margin-right: 0.25em;
+// 	vertical-align: -0.4em;
+//   }
+  
+//   blockquote p {
+// 	display: inline;
+//   }
+  
+//   // fix spacing at bottom of code boxes
+//   .hljs {
+// 	padding-bottom: 0;
+// 	margin-bottom: 15px;
+//   }

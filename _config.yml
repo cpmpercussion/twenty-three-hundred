@@ -1,55 +1,107 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
-title: Your awesome title
-email: your-email@example.com
+title: Twenty Three Hundred
+tagline: Learn Computer Systems by Hacking Hardware
+email: cpm@charlesmartin.au
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This is a course in computer systems taught by writing creative programming tasks ARMv7 assembly using the BBC Microbit v2. This covers all the typical topics in university computer systems courses.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
 
-# Build settings
-theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+theme: monophase
+
+revealify:
+  theme: assets/revealthemes/charles1720-dark.scss
+
+mathjax: true
+
+menu:
+  - name: Lectures
+    page: _lectures/index.md
+  - name: Labs
+    page: _labs/index.md
+  - name: Assessments
+    page: _assessments/index.md
+  - name: Resources
+    page: _resources/index.md
+  - name: Policies
+    page: 01-policies.md
+  - name: Help
+    page: 03-getting-help.md
+
+collections:
+  lectures:
+    output: true
+  labs:
+    output: true
+  assessments:
+    output: true
+  resources:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values: 
+      show_anchor_headings: true
+      layout: default
+      image: assets/photos/microbit-header.jpg
+  -
+    scope:
+      path: _lectures
+    values:
+      layout: reveal2300
+      theme: assets/revealthemes/charles1720-dark.scss
+      no_title_slide: true
+  - scope:
+      path: _labs
+    values:
+      layout: c-boxes-extension
+  - scope:
+      path: _resources
+    values:
+      layout: c-boxes-extension
+  - scope:
+      path: _assessments
+    values:
+      layout: c-boxes-extension
+
+markdown: kramdown
+highlighter: none
+
+sass:
+  style: compressed
+
+# populates the menu with links to related sites
+gitlab_url: https://gitlab.cecs.anu.edu.au/comp2300/2022
+streams_url: https://cs.anu.edu.au/streams/
+forum_url: https://piazza.com/anu.edu.au/fall2022/comp23006300 
+teams_url: https://teams.microsoft.com/l/team/19%3avCokhYT2BrUgXZ-LkO5puG5oddQ5oZbvHl0e8e3cKx01%40thread.tacv2/conversations?groupId=b30e30f7-b6f2-4e71-880b-b6e7ae5da0d6&tenantId=e37d725c-ab5c-4624-9ae5-f0533e486437
+lecture_streams_url: https://web.microsoftstream.com/channel/8f0aff83-8049-4f99-b3fd-6c4795ecca21
+youtube_url: https://www.youtube.com/c/CharlesMartinPercussion
+twitch_url: https://www.twitch.tv/charlesmatarles
+lecture_pdf_url: https://cloudstor.aarnet.edu.au/plus/s/8XLlF12YIxCGCw5
+echo_360_url: https://wattlecourses.anu.edu.au/mod/lti/view.php?id=2470167
+course_outline: https://programsandcourses.anu.edu.au/course/comp2300
+# URL for external media
+ext_media: https://cs.anu.edu.au/courses/comp2300/v_media
+# URLs for reference and other manuals in PDF format, located out of the git repo.
+
+# ARM Cortex M4 References
+arm_cortex_programming_memory_barrier_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARM-cortex-M-programming-guide-to-memory-barrier-instructions.pdf
+arm_cortex_M4_ref_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARM-cortex-M4-reference-manual.pdf
+armv7_architecture_ref_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARMv7-M-architecture-reference-manual.pdf
+armv7_cheat_sheet_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARMv7-cheat-sheet.pdf
+armv7_procedure_call_standard_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARMv7-procedure-call-standard.pdf
+arm_compiler_toolchain_ref_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/arm-compiler-toolchain-assembler-reference.pdf
+cortex_m4_intro_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/cortex-M4-intro-slides.pdf
+
+# MCU nRF52833 References
+mcu_reference: https://infocenter.nordicsemi.com/pdf/nRF52833_PS_v1.5.pdf
+
+# Microbit References
+microbit_schematic: https://tech.microbit.org/hardware/schematic/
+microbit_schematic_pdf: https://github.com/microbit-foundation/microbit-v2-hardware/blob/main/V2/MicroBit_V2.0.0_S_schematic.PDF
+
