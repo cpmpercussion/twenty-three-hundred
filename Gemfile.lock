@@ -1,13 +1,4 @@
 GIT
-  remote: git@gitlab.anu.edu.au:u4110680/jekyll-revealify-plugin.git
-  revision: 808c4a4846b03f7d27ee9a7873b5594f2c42f734
-  ref: 808c4a48
-  specs:
-    jekyll-revealify-plugin (2.1.0)
-      jekyll
-      nokogiri
-
-GIT
   remote: https://github.com/cpmpercussion/monophase.git
   revision: 085ba94015658756d5f0fab0ba892c219d7f3382
   branch: main
@@ -18,6 +9,15 @@ GIT
       jekyll-paginate (~> 1.1)
       jekyll-seo-tag (~> 2.7)
       kramdown-parser-gfm (~> 1.1)
+
+GIT
+  remote: https://gitlab.anu.edu.au/u4110680/jekyll-revealify-plugin.git
+  revision: 808c4a4846b03f7d27ee9a7873b5594f2c42f734
+  ref: 808c4a48
+  specs:
+    jekyll-revealify-plugin (2.1.0)
+      jekyll
+      nokogiri
 
 GEM
   remote: https://rubygems.org/

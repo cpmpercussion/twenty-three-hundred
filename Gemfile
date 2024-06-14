@@ -5,7 +5,7 @@ gem "jekyll", "~> 4.3.3"
 group :jekyll_plugins do
   gem "monophase", :git => "https://github.com/cpmpercussion/monophase.git", :branch => "main" 
   gem "jekyll-feed", "~> 0.12"
-  gem "jekyll-revealify-plugin", :git => "git@gitlab.anu.edu.au:u4110680/jekyll-revealify-plugin.git", :ref => '808c4a48'
+  gem "jekyll-revealify-plugin", :git => "https://gitlab.anu.edu.au/u4110680/jekyll-revealify-plugin.git", :ref => '808c4a48'
   gem 'jekyll-fontawesome-svg'
 end
 
