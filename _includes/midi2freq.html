@@ -1,0 +1,21 @@
+<p>
+    Midi note number <input oninput="recalc()" id="midi_input" value="69"> = <span id="frequency_display"></span>Hz (2 decimal places)
+</p>
+<script>
+ "use strict";
+
+ // The original logarithmic left-pad that rose to fame
+ function midi2freq(midiNumber) {
+     return  Math.pow(2, ((midiNumber - 69)/12))*440
+ }
+
+ function recalc() {
+     var freq_element = document.getElementById("frequency_display");
+     var midi_value = parseInt(document.getElementById("midi_input").value);
+
+     /* update the frequency value based on current MIDI input */
+     freq_element.innerHTML = midi2freq(midi_value).toFixed(2);
+ }
+
+recalc();
+</script>

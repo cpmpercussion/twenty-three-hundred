@@ -1,0 +1,46 @@
+{% comment %}
+This is the default component for listing internal site pages as cards.
+
+Given an array of site pages, generates a list of cards where each card
+shows the page title and a tagline (if present) or excerpt, and links to the page.
+
+@param {Object[]} cards - required, the list of pages to show in the cards
+@param {boolean} [no_grid] - optionally set to remove the default 3 column grid
+@param {boolean} [no_images] - optionally set to hide card images
+@param {boolean} [show_hidden] - show hidden pages (default: false)
+{% endcomment %}
+
+{% assign cards = include.cards %}
+{% assign no_grid = include.no_grid %}
+{% assign no_images = include.no_images | default: false %}
+{% assign show_hidden = include.show_hidden | default: false %}
+
+{% unless no_grid %}
+  <div class="grid grid--3">
+{% endunless %}
+
+{% for page in cards %}
+  {% unless page.hidden and show_hidden != true %}
+    {% assign title = page.title %}
+    {% assign link_url = page.url | relative_url %}
+    {% assign text = page.summary | default: page.excerpt | strip_html %}
+    {% unless no_images %}
+      {% assign image_url = page.image | default: "assets/images/placeholders/page-placeholder.svg" %}
+      {% if image_url == "assets/images/placeholders/page-placeholder.svg" %}
+        {% assign image_alt = "Placeholder image" %}
+      {% else %}
+        {% comment %} Use image_alt if set otherwise page title {% endcomment %}
+        {% assign image_alt = page.image_alt | default: page.title %}
+      {% endif %}
+      {% comment %} Make image_url relative now that we're done using it {% endcomment %}
+      {% assign image_url = image_url | relative_url %}
+    {% endunless %}
+  
+
+    {% include card.html title=title link_url=link_url text=text image_url=image_url image_alt=image_alt %}
+  {% endunless %}
+{% endfor %}
+
+{% unless no_grid %}
+  </div>
+{% endunless %}

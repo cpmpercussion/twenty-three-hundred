@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{% if page.image %}
+<img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}"
+{% endif %}
+
+<article class="page">
+  <h1 class="page-title">{{ page.title }}</h1>
+  {{ content }}
+</article>

@@ -1,0 +1,160 @@
+{% include table/table-styles.html %}
+
+{% capture table-html %}
+<table>
+  <thead>
+    <tr>
+      <th><h4>Group</h4></th>
+      <th><h4>Operation</h4></th>
+      <th><h4>Syntax</h4></th>
+      <th><h4>Semantic</h4></th>
+      <th><h4>Flags</h4></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><span><h3>Arithmetic</h3></span></th>
+      <td>
+        {% assign heads = "Addition,Subtraction,Multiplication,Division" %}
+        {% assign arr_sizes = '' | append: site.data.arm-commands.add_keys.size | append: ',' | append: site.data.arm-commands.sub_keys.size | append: ',' | append: site.data.arm-commands.mul_keys.size | append: ',' | append: site.data.arm-commands.div_keys.size | append: ',' %}
+        {% assign offsets = '0.375,0.625,0.625,0' %}
+        {% include table/spaced-operation-column.html headers=heads yml_sizes=arr_sizes manual_offset=offsets %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.add_keys content=site.data.arm-commands.add_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.sub_keys content=site.data.arm-commands.sub_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.mul_keys content=site.data.arm-commands.mul_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.div_keys content=site.data.arm-commands.div_syntax %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.add_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.sub_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.mul_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.div_semantic %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.add_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.sub_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.mul_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.div_flags %}
+      </td>
+    </tr>
+    <tr>
+      <th><span><h3>Bit operations</h3></span></th>
+      <td>
+        {% assign heads = "Logic,Tests" %}
+        {% assign arr_sizes = '' | append: site.data.arm-commands.log_keys.size | append: ',' | append: site.data.arm-commands.test_keys.size | append: ',' %}
+        {% assign offsets = '0.75,0.4' %}
+        {% include table/spaced-operation-column.html headers=heads yml_sizes=arr_sizes manual_offset=offsets %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.log_keys content=site.data.arm-commands.log_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.test_keys content=site.data.arm-commands.test_syntax %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.log_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.test_semantic %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.log_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.test_flags %}
+      </td>
+    </tr>
+    <tr>
+      <th><span><h3>Register moves</h3></span></th>
+      <td>
+        {% assign heads = "Move,Shift/Rotate" %}
+        {% assign arr_sizes = '' | append: site.data.arm-commands.mov_keys.size | append: ',' | append: site.data.arm-commands.s_r_keys.size | append: ',' %}
+        {% assign offsets = '0.5,0.45' %}
+        {% include table/spaced-operation-column.html headers=heads yml_sizes=arr_sizes manual_offset=offsets %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.mov_keys content=site.data.arm-commands.mov_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.s_r_keys content=site.data.arm-commands.s_r_syntax %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.mov_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.s_r_semantic %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.mov_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.s_r_flags %}
+      </td>
+    </tr>
+    <tr>
+      <th><span><h3>Load & Store</h3></span></th>
+      <td>
+        {% assign heads = "Offset,Pre-Offset,Post-Offset,Indexed,Literal,Positive stack,Negative stack" %}
+        {% assign arr_sizes = '' | append: site.data.arm-commands.ofs_keys.size | append: ',' | append: site.data.arm-commands.pre_ofs_keys.size | append: ',' | append: site.data.arm-commands.post_ofs_keys.size | append: ',' | append: site.data.arm-commands.idx_keys.size | append: ',' | append: site.data.arm-commands.lit_keys.size | append: ',' | append: site.data.arm-commands.pos_stack_keys.size | append: ',' | append: site.data.arm-commands.neg_stack_keys.size | append: ',' %}
+        {% assign offsets = '0,0.35,0.35,0.35,0.35,0.35,0' %}
+        {% include table/spaced-operation-column.html headers=heads yml_sizes=arr_sizes manual_offset=offsets %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.ofs_keys content=site.data.arm-commands.ofs_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.pre_ofs_keys content=site.data.arm-commands.pre_ofs_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.post_ofs_keys content=site.data.arm-commands.post_ofs_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.idx_keys content=site.data.arm-commands.idx_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.lit_keys content=site.data.arm-commands.lit_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.pos_stack_keys content=site.data.arm-commands.pos_stack_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.neg_stack_keys content=site.data.arm-commands.neg_stack_syntax %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.ofs_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.pre_ofs_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.post_ofs_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.idx_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.lit_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.pos_stack_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.neg_stack_semantic %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.l_a_s_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.l_a_s_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.l_a_s_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.l_a_s_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.l_a_s_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.l_a_s_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.l_a_s_flags %}
+      </td>
+    </tr>
+    <tr>
+      <th><span><h3>Branch</h3></span></th>
+      <td>
+        {% assign heads = "Branch on flags,Test & branch,Table based" %}
+        {% assign arr_sizes = '' | append: site.data.arm-commands.b_o_f_keys.size | append: ',' | append: site.data.arm-commands.t_a_b_keys.size | append: ',' | append: site.data.arm-commands.t_b_keys.size %}
+        {% assign offsets = '0.35,0,0' %}
+        {% include table/spaced-operation-column.html headers=heads yml_sizes=arr_sizes manual_offset=offsets style="white-space: nowrap;" %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.b_o_f_keys content=site.data.arm-commands.b_o_f_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.t_a_b_keys content=site.data.arm-commands.t_a_b_syntax %}
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.t_b_keys content=site.data.arm-commands.t_b_syntax %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.b_o_f_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.t_a_b_semantic %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.t_b_semantic %}        
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.b_o_f_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.t_a_b_flags %}
+        {% include table/plain-table-insert.html content=site.data.arm-commands.t_b_flags %}
+      </td>
+    </tr>
+    <tr>
+      <th colspan="2"><h3>Synchronization</h3></th>
+      <td>
+        {% include table/plain-table-insert.html show_emphasis=true escape=true to_emphasise=site.data.arm-commands.synch_keys content=site.data.arm-commands.synch_syntax %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.synch_semantic %}
+      </td>
+      <td>
+        {% include table/plain-table-insert.html content=site.data.arm-commands.synch_flags %}
+      </td>
+    </tr>
+  </tbody>
+</table>
+{% endcapture %}
+
+{% include vendor/accordion.html title="ARM Assembly Cheat Sheet" content=table-html styles="margin-left: -25%;," %}

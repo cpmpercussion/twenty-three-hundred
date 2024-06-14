@@ -1,0 +1,79 @@
+{% comment %}
+	The default order of the boxes and their corresponding colours is:
+	info-box, warning-box, error-box, success-box, think-box, talk-box, push-box, do-box, extension-box
+
+	If you want to override the colours of boxes either in the include statement, site variables or page variables, 
+	but do not want to change the type of boxes, make sure your colours are in that order.
+
+	Values pushed in via the include, site and page variables must already be arrays.
+
+	The default callout-box css is parameterised, so you can modify the look of the box itself by passing in values in the include tag
+	padding, border-left, margin, bg-col
+	bg-col and the color component of border-left will be overridden by the specific box colors.
+{% endcomment %}
+
+{% assign boxes = "info, warn, error, success, think, talk, push, do, extension" | split: ", " %}
+{% if include.box-types %}
+	{% assign boxes = include.box-types %}
+{% endif %}
+{% if site.callout-boxes.types %}
+	{% assign boxes = site.callout-boxes.types %}
+{% endif %}
+{% if page.callout-boxes.types %}
+	{% assign boxes = page.callout-boxes.types %}
+{% endif %}
+
+{% assign box-cols = "52, 152, 219@255, 204, 51@255, 0, 0@46, 204, 113@232, 67, 147@26, 188, 156@211, 84, 0@211, 84, 0@155, 89, 182" | split: "@" %}
+{% assign heading-cols = "#3498db;#fc3;#f00;#2ecc71;#e84393;#1abc9c;#d35400;#d35400;#9b59b6;" | split: ";" %}
+{% if include.box-cols %}
+	{% assign box-cols = include.box-cols %}
+{% endif %}
+{% if site.callout-boxes.colors %}
+	{% assign box-cols = site.callout-boxes.colors %}
+{% endif %}
+{% if page.callout-boxes.colors %}
+	{% assign box-cols = page.callout-boxes.colors %}
+{% endif %}
+
+<style>
+	.info-box, .warn-box, .error-box, .callout-box, .success-box, .think-box, .talk-box, .push-box, .do-box, .extension-box {
+		{% if include.padding %}
+			padding: {{ include.padding }};
+		{% else %}
+			padding: 1.5rem;
+		{% endif %}
+		{% if include.border-left %}
+			border-left: {{ include.border-left }};
+		{% else %}
+			border-left: 4px solid #a8a8a8;
+		{% endif %}
+	    {% if include.bg-color %}
+			background-color: {{ include.bg-color }};
+		{% else %}
+			background-color: #e0e0e0;
+		{% endif %}
+	    {% if include.margin %}
+			margin: {{ include.margin }};
+		{% else %}
+			margin: 1.5rem 0;
+		{% endif %}
+	}
+
+	{% for i in (0..boxes.size) %}
+		.{{ boxes[i] }}-box {
+			border-color: rgb({{ box-cols[i] }});
+			background-color: rgba({{ box-cols[i]  }}, 0.12);
+		}
+
+		.{{ boxes[i] }}-box::before {
+	    	background: {{ heading-cols[i] }};
+	    	color: #fff;
+	    	content: "{{ boxes[i] }}";
+	    	padding-left: 1em;
+	    	display: block;
+	    	font-weight: 900;
+	    	margin-bottom: 1em;
+		}
+	{% endfor %}
+		
+</style>

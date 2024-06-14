@@ -1,0 +1,11 @@
+<section
+    {% if include.id %}id="{{ include.id }}"{% endif %}
+    data-background-video="{% if include.video contains "http" %}{{include.video}}{%else%}{% link assets/{{include.video}} %}{% endif %}"
+    data-background-size="cover"
+    data-background-video-muted="true"
+    data-background-video-loop="true"
+>
+  {% if include.heading %}
+  <h2>{{include.heading}}</h2>
+  {% endif %}
+</section>

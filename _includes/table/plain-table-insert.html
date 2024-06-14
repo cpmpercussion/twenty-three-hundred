@@ -1,0 +1,20 @@
+<table class="plain_tbl"> 
+{% for i in (0..include.content.size) -%}
+  {% if include.show_emphasis %}
+  <tr><td>
+    <b style='color: #3395FF !important;'>{{ include.to_emphasise[i] }}</b>
+    {% if include.escape %}
+      {{ include.content[i] | escape}}
+    {% else %}
+      {{ include.content[i] }}
+    {% endif %}
+  </td></tr>
+  {% else %}
+    {% if include.escape %}
+    <tr><td>{{ include.content[i] | escape}}</td></tr>
+    {% else %}
+    <tr><td>{{ include.content[i] }}</td></tr>
+    {% endif %}
+  {% endif %}
+{% endfor -%}
+</table>

@@ -1,0 +1,19 @@
+{% if include.style %}
+  {% assign table_style = "margin-top: 0rem; margin-bottom: 0rem; border-bottom: none; border-collapse: separate; " | append: include.style %}
+{% else %}
+  {% assign table_style = "margin-top: 0rem; margin-bottom: 0rem; border-bottom: none; border-collapse: separate;" %}
+{% endif %}
+
+{% assign operation_headers = include.headers | split: "," %}
+{% assign headers_yml_array_sizes = include.yml_sizes | split: "," %}
+{% if include.manual_offset %}
+  {% assign offsets = include.manual_offset | split: "," %}
+{% endif %}
+
+<table style="{{ table_style }}">
+  {% for i in (0..operation_headers.size) %}
+  <tr><td>
+    <div style="height: {{ headers_yml_array_sizes[i] | times: 1.5 | plus: offsets[i] }}rem; line-height: {{ headers_yml_array_sizes[i] | times: 1.5 | plus: offsets[i] }}rem;">{{ operation_headers[i] }}</div>
+  </td></tr>
+  {% endfor %}
+</table>

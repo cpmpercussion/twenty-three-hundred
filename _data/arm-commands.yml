@@ -1,0 +1,377 @@
+# Arithmetic Section
+add_keys:
+  - "add"
+  - "adc"
+  - "add"
+  - "adc"
+  - "qadd"
+add_syntax:
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>"
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>"
+  - "<c><q> {<Rd>,} <Rn>, <Rm>"
+add_semantic:
+  - Rd(n) := Rn + Rm<sup>{shifted}</sup>
+  - Rd(n) := Rn + Rm<sup>{shifted}</sup> + C
+  - Rd(n) := Rn + const
+  - Rd(n) := Rn + const + C
+  - Rd(n) := saturated (Rn + Rm)
+add_flags:
+  - NZCV
+  - NZCV
+  - NZCV
+  - NZCV
+  - Q
+
+sub_keys:
+  - "sub"
+  - "sbc"
+  - "rsb"
+  - "sub"
+  - "sbc"
+  - "rsb"
+  - "qsub"
+sub_syntax:
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>"
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>"
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>"
+  - "<c><q> {<Rd>,} <Rn>, <Rm>"
+sub_semantic:
+  - Rd(n) := Rn - Rm<sup>{shifted}</sup>
+  - Rd(n) := Rn - Rm<sup>{shifted}</sup> - not (C) 
+  - Rd(n) := Rm<sup>{shifted}</sup> - Rn
+  - Rd(n) := Rn - const
+  - Rd(n) := Rn - const - not (C)
+  - Rd(n) := const - Rn
+  - Rd(n) := saturated (Rn - Rm)
+sub_flags:
+  - NZCV
+  - NZCV
+  - NZCV
+  - NZCV
+  - NZCV
+  - NZCV
+  - Q
+
+mul_keys:
+  - mul
+  - mla
+  - mls
+  - umull
+  - umlal
+  - smull
+  - smlal
+mul_syntax:
+  - "<c><q> {<Rd>,} <Rn>, <Rm>"
+  - "<c> <Rd>, <Rn>, <Rm>, <Ra>"
+  - "<c> <Rd>, <Rn>, <Rm>, <Ra>"
+  - "<c> <RdLo>, <RdHi>, <Rn>, <Rm>"
+  - "<c><q> <RdLo>, <RdHi>, <Rn>, <Rm>"
+  - "<c> <RdLo>, <RdHi>, <Rn>, <Rm>"
+  - "<c> <RdLo>, <RdHi>, <Rn>, <Rm>"
+mul_semantic:
+  - Rd(n)     := (Rn*Rm)
+  - Rd        := Ra + (Rn*Rm)
+  - Rd        := Ra - (Rn*Rm)
+  - RdHi:RdLo := unsigned_64_bit (Rn*Rm)
+  - RdHi:RdLo := unsigned_64_bit (RdHi:RdLo + (Rn*Rm))
+  - RdHi:RdLo := signed_64_bit (Rn*Rm)
+  - RdHi:RdLo := signed_64_bit (RdHi:RdLo + (Rn*Rm))
+mul_flags:
+  - "-"
+  - "-"
+  - "-"
+  - "-"
+  - "-"
+  - "-"
+  - "-"
+
+div_keys:
+  - udiv
+  - sdiv
+div_syntax:
+  - "<c> <Rd>, <Rn>, <Rm>" 
+  - "<c> <Rd>, <Rn>, <Rm>"
+div_semantic:
+  - Rd := unsigned_32_bit (Rn/Rm); rounded towards 0
+  - Rd :=   signed_32_bit (Rn/Rm); rounded towards 0
+div_flags:
+  - "-"
+  - "-"
+
+# Bit operations Section
+
+log_keys:
+  - and
+  - bic
+  - orr
+  - orn
+  - eor
+  - and
+  - bic
+  - orr
+  - orn
+  - eor
+log_syntax:
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, <Rm> {,<shift>}"
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>" 
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>" 
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>" 
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>" 
+  - "{s}<c><q> {<Rd>,} <Rn>, #<const>" 
+log_semantic:
+  - Rd(n) := Rn &and; Rm<sup>{shifted}</sup> 
+  - Rd(n) := Rn &and; &not;Rm<sup>{shifted}</sup> 
+  - Rd(n) := Rn &or; Rm<sup>{shifted}</sup> 
+  - Rd(n) := Rn &or; &not;Rm<sup>{shifted}</sup> 
+  - Rd(n) := Rn &oplus; Rm<sup>{shifted}</sup> 
+  - Rd(n) := Rn &and; const 
+  - Rd(n) := Rn &and; &not;const 
+  - Rd(n) := Rn &or; const 
+  - Rd(n) := Rn &or; &not;const 
+  - Rd(n) := Rn &oplus; const 
+log_flags:
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+
+test_keys:
+  - "cmp"
+  - "cmn"
+  - "tst"
+  - "teq"
+  - "cmp"
+  - "cmn"
+  - "tst"
+  - "teq"
+test_syntax:
+  - "<c><q> <Rn>, <Rm> {,<shift>}"
+  - "<c><q> <Rn>, <Rm> {,<shift>}"
+  - "<c><q> <Rn>, <Rm> {,<shift>}"
+  - "<c><q> <Rn>, <Rm> {,<shift>}"
+  - "<c><q> <Rn>, #<const>"
+  - "<c><q> <Rn>, #<const>"
+  - "<c><q> <Rn>, #<const>"
+  - "<c><q> <Rn>, #<const>"
+test_semantic:
+  - Rn - Rm<sup>{shifted}</sup>
+  - Rn + Rm<sup>{shifted}</sup>
+  - Rn &and; Rm<sup>{shifted}</sup>
+  - Rn &oplus; Rm<sup>{shifted}</sup>
+  - Rn - const 
+  - Rn + const 
+  - Rn &and; const 
+  - Rn &oplus; const 
+test_flags:
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+  - "NZCV"
+# Register Moves Section
+mov_keys:
+  - "mov"
+  - "mov"
+mov_syntax:
+  - "{s}<c><q> <Rd>, <Rm>"
+  - "{s}<c><q> <Rd>, #<const>"
+mov_semantic:
+  - "Rd := Rm"
+  - "Rd := const"
+mov_flags:
+  - "NZ"
+  - "NZC"
+
+s_r_keys:
+  - lsr
+  - lsr
+  - asr
+  - asr
+  - lsl
+  - lsl
+  - ror
+  - ror
+  - rrx
+s_r_syntax:
+  - "{s}<c><q> <Rd>, <Rm>, #<n>"
+  - "{s}<c><q> <Rd>, <Rm>, <Rs>"
+  - "{s}<c><q> <Rd>, <Rm>, #<n>"
+  - "{s}<c><q> <Rd>, <Rm>, <Rs>"
+  - "{s}<c><q> <Rd>, <Rm>, #<n>"
+  - "{s}<c><q> <Rd>, <Rm>, <Rs>"
+  - "{s}<c><q> <Rd>, <Rm>, #<n>"
+  - "{s}<c><q> <Rd>, <Rm>, <Rs>"
+  - "{s}<c><q> <Rd>, <Rm>"
+s_r_semantic:
+  - Rd := Rm<sup>{shifted-right by &lt;n&gt;}</sup>; filled with 0’s, C := last shifted-out
+  - Rd := Rm<sup>{shifted-right by Rs}</sup>; filled with 0’s, C := last shifted-out
+  - Rd := Rm<sup>{shifted-right by &lt;n&gt;}</sup>; filled with MSB<sup>2</sup>, C := last shifted-out
+  - Rd := Rm<sup>{shifted-right by Rs}</sup>; filled with MSB<sup>2</sup>, C := last shifted-out
+  - Rd := Rm<sup>{shifted-left by &lt;n&gt;}</sup>; filled with 0’s, C := last shifted-out
+  - Rd := Rm<sup>{shifted-left by Rs}</sup>; filled with 0’s, C := last shifted-out
+  - Rd := Rm<sup>{rotated-right by &lt;n&gt;}</sup>; C := MSB<sup>2</sup> of result
+  - Rd := Rm<sup>{rotated-right by Rs}</sup>; C := MSB<sup>2</sup> of result
+  - Rd := Rm<sup>{rotated-right by 1 including carry bit}</sup>
+s_r_flags:
+  - NZC
+  - NZC
+  - NZC
+  - NZC
+  - NZC
+  - NZC
+  - NZC
+  - NZC
+  - NZC
+# Load and Store Section
+ofs_keys:
+  - "ldr"
+  - "str"
+ofs_syntax:
+  - "<c><q> <Rd>, [<Rb> {, #+/-<offset>}]"
+  - "<c><q> <Rs>, [<Rb> {, #+/-<offset>}]"
+ofs_semantic:
+  - Rd := [Rb&plusmn;offset]
+  - .[Rb&plusmn;offset] := Rs
+
+pre_ofs_keys:
+  - "ldr"
+  - "str"
+pre_ofs_syntax:
+  - "<c><q> <Rd>, [<Rb>, #+/-<offset>]!"
+  - "<c><q> <Rs>, [<Rb>, #+/-<offset>]!"
+pre_ofs_semantic:
+  - Rb := Rb&plusmn;offset; Rd := [Rb];
+  - Rb := Rb&plusmn;offset; [Rb] := Rs;
+
+post_ofs_keys:
+  - "ldr"
+  - "str"
+post_ofs_syntax:
+  - "<c><q> <Rd>, [<Rb>], #+/-<offset>"
+  - "<c><q> <Rs>, [<Rb>], #+/-<offset>"
+post_ofs_semantic:
+  - Rd := [Rb]; Rb := Rb&plusmn;offset
+  - .[Rb] := Rs; Rb := Rb&plusmn;offset
+
+idx_keys:
+  - "ldr"
+  - "str"
+idx_syntax:
+  - "<c><q> <Rd>, [<Rb>, <Ri> {, lsl #<shift>}]"
+  - "<c><q> <Rs>, [<Rb>, <Ri> {, lsl #<shift>}]"
+idx_semantic:
+  - Rd := [Rb + Ri<sup>{shifted-left}</sup>]
+  - .[Rb + Ri<sup>{shifted-left}</sup>] := Rs
+
+lit_keys:
+  - ldr
+  - ldr
+lit_syntax:
+  - "<c><q> <Rd>, <label>"
+  - "<c><q> <Rd>, [PC, #+/-<offset>]"
+lit_semantic:
+  - Rd := [label]
+  - Rd := [PC&plusmn;offset]
+
+pos_stack_keys:
+  - stmia
+  - ldmdb
+pos_stack_syntax:
+  - "<c><q> <Rs>!, <registers>"
+  - "<c><q> <Rs>!, <registers>"
+pos_stack_semantic:
+  - "for Ri in registers: [Rs] := Ri; Rs := Rs + 4"
+  - "for Ri in reverse registers: Rs := Rs - 4; Ri := [Rs]"
+
+neg_stack_keys:
+  - stmdb
+  - ldmia
+neg_stack_syntax:
+  - "<c><q> <Rs>!, <registers>"
+  - "<c><q> <Rs>!, <registers>"
+neg_stack_semantic:
+  - "for Ri in reverse registers: Rs := Rs - 4; [Rs] := Ri"
+  - "for Ri in registers: Ri := [Rs]; Rs := Rs + 4"
+
+l_a_s_flags:
+  - "-"
+  - "-"
+# Branch Section
+b_o_f_keys:
+  - b
+  - bl
+  - bx
+  - blx
+b_o_f_syntax:
+  - "<c><q> <label>"
+  - "<c> <label>"
+  - "<c> <Rm>"
+  - "<c><q> <Rm>"
+b_o_f_semantic:
+  - if c then PC := label
+  - if c then LR := PC_next; PC := label
+  - if c then PC := Rm
+  - if c then LR := PC_next; PC := Rm
+b_o_f_flags:
+  - "-"
+  - "-"
+  - "-"
+  - "-"
+
+t_a_b_keys:
+  - cbz
+  - cbnz
+t_a_b_syntax:
+  - "<q> <Rn>, <label>"
+  - "<q> <Rn>, <label>"
+t_a_b_semantic:
+  - if Rn= 0 then PC := label
+  - if Rn! 0 then PC := label
+t_a_b_flags:
+  - "-"
+  - "-"
+
+t_b_keys:
+  - "tbb"
+  - "tbh"
+t_b_syntax:
+  - "<c><q> [<Rn>, <Rm>]"
+  - "<c><q> [<Rn>, <Rm>, lsl #1]"
+t_b_semantic:
+  - "branch to [PC + Rm’s byte in the table starting at Rn)];"
+  - "branch to [PC + Rm’s halfword in the table starting at Rn)];"
+t_b_flags:
+  - "-"
+  - "-"
+
+# Synchronization Section
+synch_keys:
+  - "ldrex"
+  - "strex"
+synch_syntax:
+  - "<c><q> <Rt>, [<Rn> {,#<offset>}]"
+  - "<c><q> <Rd>, <Rt>, [<Rn> {,#<offset>}]"
+synch_semantic:
+  - "Rt := [Rn + offset]; mark (Rn + offset) as exclusive memory"
+  - "if exclusive then [Rn + offset] := Rt; Rd := 0 else Rd := 1"
+synch_flags:
+  - "-"
+  - "-"
