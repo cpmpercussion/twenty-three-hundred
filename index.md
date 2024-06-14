@@ -32,6 +32,12 @@ This site contains:
 - [**assessment projects**]({% link _assessments/index.md %}), 
 - and other [**resources**]({% link _resources/index.md %}).
 
+## About the course
+
+Here's a fairly long talk about the course:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mZrlSOVUIYA?si=OD7HI-rDovC1JyNi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Acknowledgements
 
 These learning materials were taught by Charles Martin from 2019--2022 at the Australian National University from materials adapted from [Ben Swift](https://benswift.me) and [Uwe Zimmer](http://transit-port.net). Apologies Uwe for presenting some of your amazing diagrams in a weird format! 
