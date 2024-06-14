@@ -1,5 +1,5 @@
 GIT
-  remote: git@gitlab.anu.edu.au:jekyll-anu/gems/jekyll-revealify-plugin.git
+  remote: git@gitlab.anu.edu.au:u4110680/jekyll-revealify-plugin.git
   revision: 808c4a4846b03f7d27ee9a7873b5594f2c42f734
   ref: 808c4a48
   specs:
