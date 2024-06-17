@@ -6,7 +6,7 @@ title: Twenty-Three Hundred
 <video width="100%" controls preload="metadata"
   poster="{% link assets/welcome/comp2300-cpm-intro.jpg %}" >
   <source
-    src="https://cs.anu.edu.au/courses/comp2300/v_media/comp2300-videos/comp2300-cpm-intro.mp4"
+    src="{% link assets/welcome/comp2300-cpm-intro.mp4 %}"
     type="video/mp4">
    <track label="English" kind="subtitles" srclang="en" src="{% link assets/welcome/comp2300-cpm-intro.vtt %}" default>
 </video>
@@ -40,6 +40,6 @@ Here's a fairly long talk about the course:
 
 ## Acknowledgements
 
-These learning materials were taught by Charles Martin from 2019--2022 at the Australian National University from materials adapted from [Ben Swift](https://benswift.me) and [Uwe Zimmer](http://transit-port.net). Apologies Uwe for presenting some of your amazing diagrams in a weird format! 
+These learning materials were taught by Charles Martin from 2019--2022 at the Australian National University from materials adapted from [Ben Swift](https://benswift.me), who taught the course in 2017--2018, and [Uwe Zimmer](http://transit-port.net) who taught it a million times and continues to teach us all a lot! Apologies Uwe for presenting some of your amazing diagrams in a weird format! 
 
 Many tutors and staff contributed text and ideas to the learning activities and assessments along the way including Brent Schuetze, Harrison Shoebridge, Benjamin Gray, Ashleigh Johannes, and others I have forgotten to mention. Teaching this course was an incredible journey (and a lot of work) and I thank the students who sent a lot of positive energy and ideas back.
