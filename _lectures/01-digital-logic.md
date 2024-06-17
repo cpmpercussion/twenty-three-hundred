@@ -2,7 +2,8 @@
 title: Digital Logic
 summary: The building blocks of a CPU
 permalink: /lectures/week-1/
-image: assets/lectures/week-1/george-boole.jpg
+image: assets/lectures/week-1/adi-goldstein-EUsVwEOsblE-unsplash.jpg
+image_alt: Photo by Adi Goldstein on Unsplash
 ---
 
 {% include slides/title.html %}

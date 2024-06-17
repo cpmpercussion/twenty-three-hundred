@@ -2,7 +2,7 @@
 title: Real-Time Musical Devices
 summary: Using a real-time OS for music making
 permalink: /lectures/rtos-music/
-image: assets/lectures/bela/Sonami_Laetitia_LadysGLove.jpg
+image: assets/lectures/bela/bela-guitars.jpg
 ---
 
 {% include slides/title.html %}

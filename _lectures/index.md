@@ -17,6 +17,9 @@ All lectures for this course are available as a playlist [here on YouTube](https
 
 The lecture slides are all available below as web pages.
 
+{% include basic_collection_list.html items=site.lectures %}
+
+
 {% comment %}
 {% include page-cards.html cards=site.lectures %}
 {% endcomment %}

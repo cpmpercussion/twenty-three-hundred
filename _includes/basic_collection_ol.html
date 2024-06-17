@@ -1,0 +1,17 @@
+{% assign items = include.items %}
+
+{% for item in items %}
+{% unless item.hidden %}
+{% if item.title contains ":" %}
+  {% assign tag = item.title | split: ":" | first %}
+{% endif %}
+{% assign title = item.title %}
+{% assign link_url = item.url | prepend: site.baseurl %}
+{% assign text = item.summary | default: item.excerpt | strip_html %}
+
+### [{{ title }}]({{ link_url }})
+
+{{ text }} [(link)]({{ link_url }})
+
+{% endunless %}
+{% endfor %}
