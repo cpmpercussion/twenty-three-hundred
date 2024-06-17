@@ -82,7 +82,7 @@ different timers, all with different names and configuration options, and
 multiple timers can be used simultaneously.
 
 Your microbit has a timer called the **SysTick** timer, described in the 
-[ARMv7-M Reference Manual]({{site.armv7_architecture_ref_url}}) in *Section B3.3*.
+[ARMv7-M Reference Manual]({{ site.armv7_architecture_ref_url | relative_url }}) in *Section B3.3*.
 As with all things on your microbit, you configure the SysTick timer by
 reading and writing to special hardware registers. To configure and use the
 SysTick timer your program needs to:
@@ -110,7 +110,7 @@ zero. How long this takes in wall-clock time depends on the CPU frequency
 To configure the SysTick timer you'll need to use the
 load-twiddle-store pattern all over again. This time, the
 relevant information (addresses, offsets, bits) starts at *Section B3.3.2* on
-page 677 of the [ARMv7-M Reference Manual]({{site.armv7_architecture_ref_url}}) and includes the
+page 677 of the [ARMv7-M Reference Manual]({{ site.armv7_architecture_ref_url | relative_url }}) and includes the
 next couple of sections as well.
 
 At this point in the course you have the tools to read the manual and figure it
@@ -147,7 +147,7 @@ Copy your code to `task1.S` and push it to gitlab.
 
 You may have noticed that there's another bit in the `SYST_CSR` configuration
 register which you didn't set in the last task, but which looks interesting:
-the **TICKINT** bit. The [ARMv7-M Reference Manual]({{site.armv7_architecture_ref_url}}) says that this
+the **TICKINT** bit. The [ARMv7-M Reference Manual]({{ site.armv7_architecture_ref_url | relative_url }}) says that this
 particular bit:
 
 > indicates whether counting to 0 causes the status of the SysTick exception to
@@ -428,7 +428,7 @@ In the code above, there are four setup steps:
 
 3. Enable the GPIOTE interrupt in the NVIC, its ID number is "6". For this you
    need to set bit "6" in the NVIC's Interrupt Set Enable Register (ISER; see B3.4.4
-   in the [ARMv7-M Reference Manual]({{site.armv7_architecture_ref_url}})). We use
+   in the [ARMv7-M Reference Manual]({{ site.armv7_architecture_ref_url | relative_url }})). We use
    6 as the id because the GPIOTE interrupt is at index 6 of the nrf52833 specific 
    interrupts in the vector table. 
 
@@ -523,7 +523,7 @@ interrupt priorities in slightly different places:
 - for the SysTick interrupt, you can set the interrupt priority by writing bits
   29-31 of the System Handler Priority Register 3 (`SHPR3`, base address
   `0xE000ED20`) described in B3.2.12 of the [ARM architecture reference
-  manual]({{site.armv7_architecture_ref_url}})
+  manual]({{ site.armv7_architecture_ref_url | relative_url }})
 
 - for the GPIOTE interrupt, you can set the interrupt priority by writing bits
   21-23 of the NVIC interrupt priority register (`NVIC_IPR1`, base address

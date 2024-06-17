@@ -104,7 +104,7 @@ of each value on the stack that's the important part):
 
 ![Stack before/after interrupt]({% link assets/labs/lab-11/exeption-stack.png %}){:style="width:70%;"}
 
-[^gory-details]: *Section B1.5.6: Exception entry behavior* on p587 of the [ARM reference manual]({{site.armv7_architecture_ref_url}})
+[^gory-details]: *Section B1.5.6: Exception entry behavior* on p587 of the [ARM reference manual]({{ site.armv7_architecture_ref_url | relative_url }})
 
 Don't be fooled by the register names (e.g. `lr` or `xpsr`) alongside the values
 in the stack. While the interrupt handler (in this case `SysTick_Handler`, but
@@ -133,7 +133,7 @@ new `pc`) and execute from there" thing.
 Commit & push your "empty SysTick handler" program to GitLab. That's all you
 need to do for Task 1, it's just laying the groundwork for what's to come.
 
-[^exc-return]: The full set of *exception return* values recognised by the microbit are shown in *Table B1-9* on p596 of the [ARM reference manual]({{site.armv7_architecture_ref_url}}), but for the moment the one you'll need is *thread mode, main stack pointer* which corresponds to the value `0xFFFFFFF9`.
+[^exc-return]: The full set of *exception return* values recognised by the microbit are shown in *Table B1-9* on p596 of the [ARM reference manual]({{ site.armv7_architecture_ref_url | relative_url }}), but for the moment the one you'll need is *thread mode, main stack pointer* which corresponds to the value `0xFFFFFFF9`.
 
 ## Task 2: a handcrafted context switch {#task-2}
 
@@ -238,7 +238,7 @@ Write a program which creates a `ledblink` stack frame "by hand" in
 `switch_context`. When it runs, your program should blink the LED. Commit &
 push your program to GitLab.
 
-[^msr-instruction]: The documentation for `msr` is in Section A7.7.82 on p323 of the [ARMv7-Mreference manual]({{site.armv7_architecture_ref_url}}), also see Table B5-2 on page 729 for the bit mask. Note that we also have an `mrs` instruction, "Move to Register from Special register" (A7.7.81) that can copy bits from the APSR to a regular register.
+[^msr-instruction]: The documentation for `msr` is in Section A7.7.82 on p323 of the [ARMv7-Mreference manual]({{ site.armv7_architecture_ref_url | relative_url }}), also see Table B5-2 on page 729 for the bit mask. Note that we also have an `mrs` instruction, "Move to Register from Special register" (A7.7.81) that can copy bits from the APSR to a regular register.
 
 {:.extension-box id="what-about-r4-r11"}
 
@@ -317,7 +317,7 @@ push it to gitlab.
 
 The "return from interrupt" value for `lr` is usually `0xFFFFFFF9`, but other
 values are possible! If you look in section B1.5.8 (p.595) of the [Architecture
-Reference Manual]({{site.armv7_architecture_ref_url}}), "Exception Return
+Reference Manual]({{ site.armv7_architecture_ref_url | relative_url }}), "Exception Return
 Behaviour", you'll see that bits 0-3 in this exception return value can help
 you switch between two `SP` values (the Cortex M4 can actually keep track of
 two stacks for you: "main" and "process"), and put the CPU into "Handler" or
@@ -329,7 +329,7 @@ Once you've got your multi-process *yournameOS* up and running, there are
 several things you can try to add some polish for version 2. This task provides
 a few ideas---some of these are fairly simple additions to what you've got
 already, while others are quite advanced. Ask your tutor for help, read
-[the]({{site.mcu_reference}}) [manuals]({{site.armv7_architecture_ref_url}}),
+[the]({{site.mcu_reference}}) [manuals]({{ site.armv7_architecture_ref_url | relative_url }}),
 and try to stretch yourself!
 
 1. modify the scheduler to also save & restore the *other* registers
@@ -359,7 +359,7 @@ and try to stretch yourself!
    at the Asynchronism lecture slides & recordings)
 
 8. **advanced**: use thread privileges & the Memory Protection Unit (*Section
-   B3.5* in the [ARM reference manual]({{site.armv7_architecture_ref_url}})) to
+   B3.5* in the [ARM reference manual]({{ site.armv7_architecture_ref_url | relative_url }})) to
    ensure that each process can only read & write to its own (independent)
    sub-region of the microbit's memory.
 

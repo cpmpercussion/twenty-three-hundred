@@ -255,7 +255,7 @@ bvc <label> @ branch if V = 0
 
 ## AAPCS {#aapcs}
 
-The [ARMv7 Architecture Procedure Call Standard]({{site.armv7_procedure_call_standard_url}}) is the convention we'll (try to) adhere to in programming our microbits
+The [ARMv7 Architecture Procedure Call Standard]({{ site.armv7_procedure_call_standard_url | relative_url }}) is the convention we'll (try to) adhere to in programming our microbits
 
 The full standard is quite detailed, but the general summary is:
 

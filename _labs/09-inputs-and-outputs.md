@@ -76,7 +76,7 @@ from the right in `NVIC_ICER0`).
 
 However, you might have noticed something if you were reading Sections B3.4.5
 (p684) and B3.4.7 (p685) the [ARM reference
-manual]({{site.armv7_architecture_ref_url}}) really closely. In the description
+manual]({{ site.armv7_architecture_ref_url | relative_url }}) really closely. In the description
 for those registers it says:
 
 > **1**: On reads, interrupt enabled

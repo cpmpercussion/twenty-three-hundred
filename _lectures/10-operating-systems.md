@@ -333,7 +333,7 @@ enforced in **hardware**
 different architectures enforce this in different ways
 
 check the manual (e.g. *Section A2.3.4* on p32 or *Table B1-1 Mode* on p568 of the [ARMv7-M reference
-manual]({{site.armv7_architecture_ref_url}})
+manual]({{ site.armv7_architecture_ref_url | relative_url }})
 
 
 [Fun video for the nostalgic: What is DOS protected mode?](https://youtu.be/XAyQLV5bbb0)
@@ -360,7 +360,7 @@ have you noticed these entries in the vector table in labs?
 	.word	PendSV_Handler
 ```
 
-the `svc` instruction (A7.7.175 in the [reference manual]({{site.armv7_architecture_ref_url}})) runs the
+the `svc` instruction (A7.7.175 in the [reference manual]({{ site.armv7_architecture_ref_url | relative_url }})) runs the
 `SVC_Handler` immediately
 
 {:.stretch}

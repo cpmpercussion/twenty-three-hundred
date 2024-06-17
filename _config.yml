@@ -76,32 +76,19 @@ sass:
 
 # populates the menu with links to related sites
 gitlab_url: https://gitlab.cecs.anu.edu.au/comp2300/2022
-streams_url: https://cs.anu.edu.au/streams/
-forum_url: https://piazza.com/anu.edu.au/fall2022/comp23006300 
-teams_url: https://teams.microsoft.com/l/team/19%3avCokhYT2BrUgXZ-LkO5puG5oddQ5oZbvHl0e8e3cKx01%40thread.tacv2/conversations?groupId=b30e30f7-b6f2-4e71-880b-b6e7ae5da0d6&tenantId=e37d725c-ab5c-4624-9ae5-f0533e486437
-lecture_streams_url: https://web.microsoftstream.com/channel/8f0aff83-8049-4f99-b3fd-6c4795ecca21
 youtube_url: https://www.youtube.com/c/CharlesMartinPercussion
-twitch_url: https://www.twitch.tv/charlesmatarles
-lecture_pdf_url: https://cloudstor.aarnet.edu.au/plus/s/8XLlF12YIxCGCw5
-echo_360_url: https://wattlecourses.anu.edu.au/mod/lti/view.php?id=2470167
-course_outline: https://programsandcourses.anu.edu.au/course/comp2300
-# URL for external media
-ext_media: https://cs.anu.edu.au/courses/comp2300/v_media
 # URLs for reference and other manuals in PDF format, located out of the git repo.
 
 # ARM Cortex M4 References
-arm_cortex_programming_memory_barrier_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARM-cortex-M-programming-guide-to-memory-barrier-instructions.pdf
-arm_cortex_M4_ref_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARM-cortex-M4-reference-manual.pdf
-armv7_architecture_ref_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARMv7-M-architecture-reference-manual.pdf
-armv7_cheat_sheet_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARMv7-cheat-sheet.pdf
-armv7_procedure_call_standard_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/ARMv7-procedure-call-standard.pdf
-arm_compiler_toolchain_ref_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/arm-compiler-toolchain-assembler-reference.pdf
-cortex_m4_intro_url: https://cs.anu.edu.au/courses/comp2300/v_media/manuals/cortex-M4-intro-slides.pdf
+arm_cortex_programming_memory_barrier_url: assets/manuals/ARM-cortex-M-programming-guide-to-memory-barrier-instructions.pdf
+arm_cortex_M4_ref_url: assets/manuals/ARM-cortex-M4-reference-manual.pdf
+armv7_architecture_ref_url: assets/manuals/ARMv7-M-architecture-reference-manual.pdf
+armv7_cheat_sheet_url: assets/manuals/ARMv7-cheat-sheet.pdf
+armv7_procedure_call_standard_url: assets/manuals/ARMv7-procedure-call-standard.pdf
 
 # MCU nRF52833 References
 mcu_reference: https://infocenter.nordicsemi.com/pdf/nRF52833_PS_v1.5.pdf
 
 # Microbit References
 microbit_schematic: https://tech.microbit.org/hardware/schematic/
-microbit_schematic_pdf: https://github.com/microbit-foundation/microbit-v2-hardware/blob/main/V2/MicroBit_V2.0.0_S_schematic.PDF
-
+microbit_schematic_pdf: assets/manuals/MicroBit_V2.0.0_S_schematic.PDF

@@ -8,23 +8,23 @@ show_toc: true
 
 Here are the important manuals for your microbit, its nRF52 MCU, and the ARM Cortex-M4 CPU within it.
 
-### [COMP2300 ARMv7 cheat sheet]({{site.armv7_cheat_sheet_url}}) {#cheat-sheet}
+### [COMP2300 ARMv7 cheat sheet]({{ site.armv7_cheat_sheet_url | relative_url }}) {#cheat-sheet}
 
 This cheat sheet has all the most important ARM assembly instructions that you
 will use in this course. It doesn't include everything, but it's a good one to
 keep handy (Charles has one printed out on his desk at all times).
 
-It's available in [PDF]({{site.armv7_cheat_sheet_url}}) or as a [web page]({%
+It's available in [PDF]({{ site.armv7_cheat_sheet_url | relative_url }}) or as a [web page]({%
 link _resources/ARM_cheat_sheet.md %}).
 
 
-### [ARM®v7-M Architecture Reference Manual]({{site.armv7_architecture_ref_url}}) {#armv7-reference}
+### [ARM®v7-M Architecture Reference Manual]({{ site.armv7_architecture_ref_url | relative_url }}) {#armv7-reference}
 
 This is the official manual for the ARM Instruction Set Architecture used by your microbit. Make
 sure you know how to search & bookmark this document in your pdf viewer of
 choice.
 
-### ARM Cortex-M4 Technical Reference Manual ([pdf]({{ site.arm_cortex_M4_ref_url }}), [website](https://developer.arm.com/documentation/ddi0439/b))
+### ARM Cortex-M4 Technical Reference Manual ([pdf]({{ site.arm_cortex_M4_ref_url | relative_url }}), [website](https://developer.arm.com/documentation/ddi0439/b))
 
 This is the reference manual for the Cortex-M4 CPU. This provides documentation
 of the built-in peripherals such as the NVIC (nested vectored interrupt

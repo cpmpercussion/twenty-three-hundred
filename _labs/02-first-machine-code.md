@@ -45,8 +45,8 @@ case.
 Useful references (no need to look at these just yet, we'll step you through
 when you'll need each one):
 
-- [ARM assembly cheat sheet]({{ site.armv7_cheat_sheet_url }})
-- [ARM®v7-M Architecture Reference Manual]({{ site.armv7_architecture_ref_url }})
+- [ARM assembly cheat sheet]({{ site.armv7_cheat_sheet_url | relative_url }})
+- [ARM®v7-M Architecture Reference Manual]({{ site.armv7_architecture_ref_url | relative_url }})
 
 {% include table/arm-table.html %}
 
@@ -76,7 +76,7 @@ the desired format. This will help you make sense of the value of a register.
 ### ARM assembly syntax 
 
 This is probably the first time you've written any ARM assembly code, so for
-this course we've prepared a [cheat sheet]({{ site.armv7_cheat_sheet_url }}) to
+this course we've prepared a [cheat sheet]({{ site.armv7_cheat_sheet_url | relative_url }}) to
 help you out. It looks pretty intimidating at first---mostly because it crams a
 lot of information into a small space. So let's pick one line of the cheat
 sheet---the `sub` instruction---and pick it apart.
@@ -331,7 +331,7 @@ them? And if you've figured that out, why doesn't your program actually *work*? 
 
 To fully make sense of these instruction encodings you need more than just your
 cheat sheet, you need the [ARM®v7-M Architecture Reference
-Manual]({{site.armv7_architecture_ref_url}}).
+Manual]({{ site.armv7_architecture_ref_url | relative_url }}).
 You need to dig to the deepest levels, by going to **section A7.7**
 *Alphabetical list of ARMv7-M Thumb instructions* (page A7-184). Use the
 bookmarks in your pdf viewer to navigate to the relevant instructions inside
@@ -541,7 +541,7 @@ starts executing the `main` function which you have defined.
 How might you figure out on your microbit's Cortex-M4 CPU whether a 32-bit
 instruction is read as one 32-bit word or as two 16-bit half-words? (hint: have
 a look at A5.1 in the [ARM®v7-M Architecture Reference
-Manual]({{site.armv7_architecture_ref_url}})).
+Manual]({{ site.armv7_architecture_ref_url | relative_url }})).
 
 ### Which encoding?
 

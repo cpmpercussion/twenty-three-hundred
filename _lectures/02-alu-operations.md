@@ -328,7 +328,7 @@ expected
 
 ## The reference manual
 
-There's a full list of all instructions & encodings in the [ARM®v7-M Architecture Reference Manual]({{site.armv7_architecture_ref_url}}), section 7.7 (starting on p184)
+There's a full list of all instructions & encodings in the [ARM®v7-M Architecture Reference Manual]({{ site.armv7_architecture_ref_url | relative_url }}), section 7.7 (starting on p184)
 
 It's got *all* the gory details
 

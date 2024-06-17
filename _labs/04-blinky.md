@@ -409,7 +409,7 @@ A bit more background: LEDs, like most electrical components have two
 connections, you might have heard them being called "positive" and "negative"
 or "+" and "-". On the microbit, each LED has it's positive side connected to a
 ROW pin and it's negative side connected to a COLUMN pin (how do we know? The
-circuit is in the [microbit schematics]({{ site.microbit_schematic_pdf }})
+circuit is in the [microbit schematics]({{ site.microbit_schematic_pdf | relative_url }})
 :-D).
 
 This means that to turn an LED on, we have to set the corresponding ROW pin to

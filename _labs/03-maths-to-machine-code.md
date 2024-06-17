@@ -26,8 +26,8 @@ In this week's lab you will:
 
 Useful reference material:
 
-- [ARM assembly cheat sheet]({{site.armv7_cheat_sheet_url}})
-- [ARM®v7-M Architecture Reference Manual]({{site.armv7_architecture_ref_url}})
+- [ARM assembly cheat sheet]({{ site.armv7_cheat_sheet_url | relative_url }})
+- [ARM®v7-M Architecture Reference Manual]({{ site.armv7_architecture_ref_url | relative_url }})
 
 And here's the conversion widget again, because it always comes in handy:
 
@@ -141,7 +141,7 @@ Now that you're storing the HP, here's the first action in the game:
 - **healing potion**: add 50HP (hp := hp + 50)
 
 Write an assembly instruction for this action. Remember to look at the [cheat
-sheet]({{site.armv7_cheat_sheet_url}})---nobody expects you to recall this
+sheet]({{ site.armv7_cheat_sheet_url | relative_url }})---nobody expects you to recall this
 stuff perfectly from memory.
 
 Step through your program---what's the value in the hit point register after
@@ -196,7 +196,7 @@ destination register, but `adds` will update the flags to leave some
 "breadcrumbs" about the result (which can be helpful, as you'll soon see).
 
 In addition to this, if you look at the *Tests* section of the [cheat
-sheet]({{site.armv7_cheat_sheet_url}}) then you can see that there are some
+sheet]({{ site.armv7_cheat_sheet_url | relative_url }}) then you can see that there are some
 instructions specifically used to update the flags without changing the values
 in the general purpose registers (`r0` - `r12`). For example, `cmp r0, 10` is
 the same as `subs r0, 10` except that the value in r0 is left untouched.
@@ -393,7 +393,7 @@ Copy the code into `tasks/task-6.S`. Commit and push your changes with the messa
 The program status register `xPSR` is a bit different from the other registers,
 and you can't use it in all instructions. You can access it with special
 instructions, though---check out `MRS` and `MSR` in the [ARMv7 reference
-manual]({{site.armv7_architecture_ref_url}}).
+manual]({{ site.armv7_architecture_ref_url | relative_url }}).
 Can you think of a way (or an addition to your program) to make your life easier
 in reading the program status register?
 

@@ -86,7 +86,7 @@ attention to as you look over it.
   when you want to want to use `sp` to keep track of the stack. You can see the
   `push`/`pop` instructions in *Section A7.7* of your
   your
-  [ARMv7 reference manual]({{site.armv7_architecture_ref_url}})
+  [ARMv7 reference manual]({{ site.armv7_architecture_ref_url | relative_url }})
 
 - Some (but not all) of the functions take arguments (described in the
   comments), so before you call these functions make sure you've got the right

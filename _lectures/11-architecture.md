@@ -171,7 +171,7 @@ same latency, but higher throughput
 {:.stretch}
 ![ARM Cortex-M3/4 pipeline]({% link assets/lectures/week-11/arm-cortex-m4-pipeline.png %})
 
-(from p15. [ARM Cortex-M Programming Guide to Memory Barrier Instructions]({{site.arm_cortex_programming_memory_barrier_url}}))
+(from p15. [ARM Cortex-M Programming Guide to Memory Barrier Instructions]({{ site.arm_cortex_programming_memory_barrier_url | relative_url }}))
 
 (conditional) branches might break the pipelines (requiring a "flush").
 
