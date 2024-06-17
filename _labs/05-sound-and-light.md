@@ -1,8 +1,10 @@
 ---
 title: "Week 5: sound and light"
-summary: "Using functions to play sounds and blink lights on your microbit"
+summary: "Using functions to play sounds and blink lights on your microbit."
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-2
 show_toc: true
+image: assets/lectures/synth/sawtooth-wave.png
+image_alt: Sawtooth Wave image by Charles Martin
 ---
 
 {:.warn-box}

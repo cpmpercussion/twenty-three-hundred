@@ -1,8 +1,10 @@
 ---
 title: "Week 4: blinky"
-summary: "Using the load-twiddle-store pattern to turn on and blink the lights on your microbit"
+summary: "Using the load-twiddle-store pattern to turn on and blink the lights on your microbit."
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-2
 show_toc: true
+image: assets/photos/microbit-front.jpg
+image_alt: Image by Charles Martin
 ---
 
 {% comment %}

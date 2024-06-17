@@ -1,8 +1,10 @@
 ---
 title: "Week 3: maths to machine code"
-summary: "Translating mathematical expressions into assembly sequences & an introduction to branching"
+summary: "Translating mathematical expressions into assembly sequences and an introduction to branching."
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-1
 use_toc: true
+image: assets/labs/lab-3/k-e-1qx2J3TsRsk-unsplash.jpg
+image_alt: Photo by K E on Unsplash
 ---
 
 ## Introduction

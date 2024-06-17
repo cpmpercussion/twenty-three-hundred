@@ -3,6 +3,8 @@ title: "Week 9: inputs and outputs"
 summary: "Putting it all together with inputs and outputs"
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-3
 show_toc: true
+image: assets/labs/lab-9/florian-krumm-1osIUArK5oA-unsplash.jpg
+image_alt: Photo by Florian Krumm on Unsplash
 ---
 
 {:.warn-box}

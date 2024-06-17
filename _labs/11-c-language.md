@@ -1,8 +1,9 @@
 ---
 title: "Week 11: the C programming language"
-summary: "Coding a step above assembly"
+summary: "Coding a step above assembly using C."
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-4
 show_toc: true
+image: assets/labs/lab-11/example-w11.png
 ---
 
 ## Introduction
@@ -57,7 +58,7 @@ If there are any conflicts then you can go ahead and 'accept incoming' for them.
 If you get stuck you can ask a tutor for help. Once you've done that, your week-11 
 folder should look like:  
 
-![exanmple-week-11]({% link assets/labs/lab-11/example-w11.png %}){:style="width:auto; height:auto;"}
+![example-week-11]({% link assets/labs/lab-11/example-w11.png %}){:style="width:auto; height:auto;"}
 </div>
 
 ## Task 1: Functions variables, and disassembly

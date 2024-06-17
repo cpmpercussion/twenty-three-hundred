@@ -1,9 +1,10 @@
 ---
 title: "Week 1: introduction"
-summary: Pick up your microbit and fire up your IDE
+summary: Pick up your microbit, fire up your IDE, compile and debug your first assembly program.
 hidden: false
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-1
 show_toc: true
+image: assets/labs/lab-1/boxed-microbit.jpg
 ---
 
 {% include liquid-boxes.html %}

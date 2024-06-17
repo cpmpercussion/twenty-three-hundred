@@ -1,8 +1,9 @@
 ---
 title: "Week 2: first machine code"
-summary: "Writing your first program"
+summary: "Write a custom piece of machine code and learn how numbers are really saved on your microbit."
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-1
 show_toc: true
+image: assets/labs/lab-2/memory-view.png
 ---
 
 ## Introduction {#introduction}

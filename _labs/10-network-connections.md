@@ -1,8 +1,9 @@
 ---
 title: "Week 10: network connections"
-summary: "using GPIOs and wires to transmit data"
+summary: "Using GPIOs and wires to transmit data from microbit to microbit."
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-4
 show_toc: true
+image: assets/labs/lab-10/intra-connect.png
 ---
 
 ## Outline

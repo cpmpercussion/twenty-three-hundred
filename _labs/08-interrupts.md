@@ -3,6 +3,7 @@ title: "Week 8: buttons and interrupts"
 summary: "Taking input from the world (finally!)"
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-3
 show_toc: true
+image: assets/labs/lab-9/single-interrupt-timeline.png
 ---
 
 {:.warn-box}

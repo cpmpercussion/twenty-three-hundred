@@ -1,8 +1,9 @@
 ---
 title: "Week 7: data structures"
-summary: "Communicating with morse code"
+summary: "Creating arrays in assembly to communicate using morse code."
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-3
 show_toc: true
+image: assets/labs/lab-7/array-in-memory.png
 ---
 
 {:.info-box} 

@@ -1,8 +1,9 @@
 ---
 title: "Week 12: DIY operating system"
-summary: "putting it all together to create a simple multi-tasking OS"
+summary: "Putting it of your knowledge together to create a simple multi-tasking OS (really!)"
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-4
 show_toc: true
+image: assets/lectures/week-10/jurassic-park-unix-2.jpg
 ---
 
 {:.info-box} 
@@ -324,8 +325,6 @@ two stacks for you: "main" and "process"), and put the CPU into "Handler" or
 
 ## Extra Tasks: pimp your OS {#task-4}
 
-![xzibit]({% link assets/labs/lab-11/xzibit.jpg %}){:style="width: 100%;"}
-
 Once you've got your multi-process *yournameOS* up and running, there are
 several things you can try to add some polish for version 2. This task provides
 a few ideas---some of these are fairly simple additions to what you've got
@@ -376,12 +375,7 @@ also write a suitably self-congratulatory commit message. Well done, you!
 ## Coda
 
 Folks, if you're reading this, you've done it. You're at the end of
-COMP2300/6300 and you've completed all the lab material. I'm proud of you, and
+Twenty-Three-Hundred and you've completed all the lab material. I'm proud of you, and
 you should be proud of yourself: I bet you didn't think you would be writing an
-OS when you starting adding registers in lab 2 (I hope that this lab was a
-sufficient final boss battle!). Remember that these labs are the key learning
-activity in the course, so if you have missed anything, go back and try it out
-before the final exam. If you find yourself doing something cool with the
-microbit in future, send it in to your tutor or Charles, we might end up
-featuring it in future versions of the course!
-
+OS when you starting adding registers in lab 2. We hope that this lab was a
+sufficient final boss battle!

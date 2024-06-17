@@ -1,8 +1,10 @@
 ---
 title: "Week 6: functions"
-summary: "Branching with purpose"
+summary: "Write functions with parameters, return values, and keep track of where you are going so you can find the way back!"
 template_repo: https://gitlab.cecs.anu.edu.au/comp2300/2022/comp2300-2022-lab-pack-2
 show_toc: true
+image: assets/lectures/week-5/jeremy-cai-1169-unsplash.jpg
+image_alt: By Jemremy Cai on Unsplash
 ---
 
 ## Outline
